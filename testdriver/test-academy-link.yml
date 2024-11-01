@@ -1,0 +1,24 @@
+version: 4.0.79
+steps:
+  - prompt: Click on the "Academy" link in the header.
+    commands:
+      - command: hover-text
+        text: Academy
+        description: link in the header
+        action: click
+  - prompt: Click on the "Academy" link in the header.
+    commands:
+      - command: hover-text
+        text: Academy
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+  - prompt: Click on the "Academy" link in the header.
+    commands:
+      - command: hover-text
+        text: Academy
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
