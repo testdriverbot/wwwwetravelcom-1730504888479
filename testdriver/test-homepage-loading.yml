@@ -1,0 +1,14 @@
+version: 4.0.79
+steps:
+  - prompt: Assert that the webpage loads.
+    commands:
+      - command: assert
+        expect: >-
+          the booking & payments platform for multi-day and group travel
+          businesses is visible
+  - prompt: >-
+      Assert that the logo is visible on the homepage.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: wetravel logo is visible
