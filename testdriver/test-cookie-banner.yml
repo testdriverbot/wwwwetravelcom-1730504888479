@@ -1,0 +1,14 @@
+version: 4.0.79
+steps:
+  - prompt: If a cookie banner appears, click "Accept All Cookies".
+    commands:
+      - command: hover-text
+        text: Accept All Cookies
+        description: button in the cookie banner
+        action: click
+  - prompt: >-
+      Assert that the cookie banner disappears after clicking.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the cookie banner is not visible
