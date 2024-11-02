@@ -1,0 +1,66 @@
+version: 4.0.79
+steps:
+  - prompt: Hover over the "Product" dropdown in the header.
+    commands:
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+  - prompt: Click on each sub-link.
+    commands:
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+      - command: hover-text
+        text: Sub-link 1
+        description: first sub-link under Product
+        action: click
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+      - command: hover-text
+        text: Sub-link 2
+        description: second sub-link under Product
+        action: click
+  - prompt: Click on each sub-link.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+      - command: hover-text
+        text: Sub-link 1
+        description: first sub-link under Product
+        action: click
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+      - command: hover-text
+        text: Sub-link 2
+        description: second sub-link under Product
+        action: click
+  - prompt: Click on each sub-link.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+      - command: hover-text
+        text: Sub-link 1
+        description: first sub-link under Product
+        action: click
+      - command: hover-text
+        text: PRODUCT
+        description: Product dropdown in the header
+        action: hover
+      - command: hover-text
+        text: Sub-link 2
+        description: second sub-link under Product
+        action: click
