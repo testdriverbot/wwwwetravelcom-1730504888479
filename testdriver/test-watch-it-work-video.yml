@@ -1,0 +1,20 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Watch It Work" button.
+    commands:
+      - command: hover-text
+        text: Watch It Work
+        description: button to view a demonstration
+        action: click
+  - prompt: Click the "Watch It Work" button.
+    commands:
+      - command: hover-text
+        text: Watch It Work
+        description: button to view a demonstration
+        action: double-click
+  - prompt: Click the "Watch It Work" button.
+    commands:
+      - command: hover-text
+        text: Watch It Work
+        description: button to view a demonstration
+        action: double-click
