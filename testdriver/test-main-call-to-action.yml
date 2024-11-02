@@ -1,0 +1,86 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Try For Free" button.
+    commands:
+      - command: hover-text
+        text: Try For Free
+        description: button to start a free trial
+        action: click
+  - prompt: Assert that a sign-up or onboarding form appears.
+    commands:
+      - command: assert
+        expect: a sign-up or onboarding form appears
+  - prompt: Complete the sign-up or onboarding process.
+    commands:
+      - command: hover-text
+        text: Your Email
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Next
+        description: button to proceed with sign-up
+        action: click
+  - prompt: Complete the sign-up or onboarding process.
+    commands:
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: securepassword123
+      - command: hover-text
+        text: Log In
+        description: button to proceed with login
+        action: click
+      - command: hover-text
+        text: Next
+        description: button to proceed with sign-up
+        action: click
+  - prompt: >-
+      Assert that a success message or page is shown.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: a success message or page is not shown
+  - prompt: >-
+      Assert that a success message or page is shown.  # Use the content of the
+      file from the environment
+    commands:
+      - command: hover-text
+        text: Your Email
+        description: email input field
+        action: click
+      - command: type
+        text: newemail@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: newpassword123
+      - command: hover-text
+        text: Log In
+        description: button to attempt login
+        action: click
+  - prompt: >-
+      Assert that a success message or page is shown.  # Use the content of the
+      file from the environment
+    commands:
+      - command: hover-text
+        text: Your Email
+        description: email input field
+        action: click
+      - command: type
+        text: newemail@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: newpassword123
+      - command: hover-text
+        text: Log In
+        description: button to attempt login
+        action: click
