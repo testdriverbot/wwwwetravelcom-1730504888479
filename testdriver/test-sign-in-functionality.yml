@@ -1,0 +1,44 @@
+version: 4.0.79
+steps:
+  - prompt: Click on the "SIGN IN" button.
+    commands:
+      - command: hover-text
+        text: SIGN IN
+        description: button in the header
+        action: click
+  - prompt: Assert that a login form is displayed.
+    commands:
+      - command: assert
+        expect: Enter your email to sign up or log in is visible
+  - prompt: Enter test credentials and submit.
+    commands:
+      - command: hover-text
+        text: Your Email
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Next
+        description: next button
+        action: click
+  - prompt: >-
+      Assert that login is successful or an error message is shown.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: Welcome back or Invalid credentials is visible
+  - prompt: >-
+      Assert that login is successful or an error message is shown.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: password123
+      - command: hover-text
+        text: Log In
+        description: log in button
+        action: click
