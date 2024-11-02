@@ -1,0 +1,81 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Contact Us" link in the footer.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
+      - command: hover-text
+        text: Contact Us
+        description: link in the footer
+        action: click
+  - prompt: Assert that a contact form or contact information page is displayed.
+    commands:
+      - command: assert
+        expect: a contact form is displayed
+  - prompt: Complete the contact form or initiate contact.
+    commands:
+      - command: hover-text
+        text: First Name*
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name*
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email*
+        description: email field
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Country*
+        description: country dropdown
+        action: click
+      - command: type
+        text: United States
+      - command: hover-text
+        text: Comment*
+        description: comment field
+        action: click
+      - command: type
+        text: This is a test message.
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
+  - prompt: Complete the contact form or initiate contact.
+    commands:
+      - command: hover-text
+        text: Email*
+        description: email field
+        action: click
+      - command: type
+        text: johndoe@validemail.com
+      - command: hover-text
+        text: Website URL*
+        description: website field
+        action: click
+      - command: type
+        text: www.example.com
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
+  - prompt: Complete the contact form or initiate contact.
+    commands:
+      - command: hover-text
+        text: Email*
+        description: email field
+        action: click
+      - command: type
+        text: johndoe@validemail.com
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
